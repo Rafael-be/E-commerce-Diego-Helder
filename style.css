@@ -10,15 +10,16 @@ html, body {
     scroll-behavior: smooth;
     font-family: Arial, Helvetica, sans-serif;
     font-size: 16px;
+    overflow-x: hidden;
 }
 
 body {
     display: grid;
     grid-template-areas:
-        "header header header header"
-        "aside main main main";
-    grid-template-rows: 12vh 1fr ;
-    grid-template-columns: 15vw 1fr 1fr 1fr;
+        "header header"
+        "aside main";
+    grid-template-rows: 12vh 1fr;
+    grid-template-columns: 15vw 1fr;
 }
 
 .header {
@@ -28,58 +29,80 @@ body {
     height: 12vh;
     position: relative;
     display: grid;
-    grid-template-columns: 15vw 43vw auto 15vw 15vw;
+    grid-template-columns: 15vw 43vw auto 7vw 7vw; 
+    gap: 1vmin; 
     align-items: center;
     overflow: hidden;
     border-bottom: 1px solid white;
 }
-.pesquisa{
+
+.pesquisa {
     margin-left: 3vmin;
     grid-column-start: 2;
     position: relative;
 }
-.pesquisa input{
-    width: 43vw;
+
+.pesquisa input {
+    width: 100%;
+    max-width: 43vw;
+    min-width: 100px;
     padding: 2vmin;
     background-color: rgb(217, 217, 217, 100);
     border-radius: 35px;
     border: none;
-    font-size: 2vmin; 
+    font-size: 2vmin;
 }
+
 .pesquisa input::placeholder {
-    font-size: 2vmin;  
+    font-size: 2vmin;
 }
-.pesquisa input:focus{
+
+.pesquisa input:focus {
     border: none;
     outline: none;
 }
-.logo{
+
+.logo {
     display: flex;
     grid-column-start: 1;
     align-items: center;
     justify-content: center;
 }
-#img_logo{
+
+#img_logo {
     width: 10vmin;
 }
-#lupa{
+
+#lupa {
     width: 5vmin;
     position: absolute;
     top: 50%;
-    right: 0;
+    right: 0.7vmin;
     transform: translateY(-50%);
     pointer-events: none;
 }
-.container_conta{
+
+.container_conta {
     grid-column-start: 4;
-    grid-column-end: 4;
-    position: absolute;
-    right: 0;
+    grid-column-end: 5;
+    display: flex;
+    justify-content: flex-end; 
+    padding-right: 9vmin;
 }
-.container_carrinho{
+
+.container_carrinho {
     grid-column-start: 5;
-    position: absolute;
-    right: 10vmin;
+    display: flex;
+    justify-content: flex-end; 
+    padding-right: 9vmin; 
+}
+
+.container_conta img {
+    width: 8vmin;
+}
+
+.container_carrinho img {
+    width: 7vmin;
 }
 
 .aside {
@@ -89,42 +112,95 @@ body {
     height: 100%;
     border-right: 1px solid white;
 }
-.navbar{
+
+.navbar {
     font-size: 3vmin;
     overflow-wrap: break-word;
 }
-.navbar ul{
+
+.navbar ul {
     padding: 0px;
     text-decoration: none;
 }
-.navbar li, h1{
+
+.navbar li,
+h1 {
     border-bottom: 1px solid white;
 }
-.navbar a{
+
+.navbar a {
     color: white;
     text-decoration: none;
     padding: 15px;
     display: block;
 }
-ul h1, #periferico{
+
+ul h1,
+#periferico {
     display: block;
     padding: 15px;
     color: white;
 }
-.submenu, .submenu-aparece{
+
+.submenu,
+.submenu-aparece {
     display: none;
 }
-.submenu-aparece:checked + label + .submenu{
+
+.submenu-aparece:checked + label + .submenu {
     display: block;
 }
-#periferico:hover{
+
+#periferico:hover {
     cursor: pointer;
 }
-
-
 .main {
     grid-area: main;
     background-color: rgb(48, 48, 48, 100);
     width: 100%;
     height: 100%;
+    position: relative;
+    display: grid;
+    grid-template-columns: 15vmin auto 15vmin;
+    grid-template-rows: 5vmin 15vh 5vmin 15vh;
+    min-width: 0; 
+}
+
+.container-banner {
+    grid-column-start: 2;
+    grid-row-start: 2;
+    width: 100%;             
+    max-width: 70vw;          
+    min-height: 10vh;         
+    height: auto; 
+    background-color: rgb(217, 217, 217, 100);
+    overflow: hidden;
+    overflow-wrap: break-word;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    padding: 1vmin;
+    line-height: 7vmin;
+    border-radius: 8px;
+    position: relative;
+}
+
+.container-banner h1, .contaner-faixa_de_preço h1 {
+    font-size: 5vmin;
+    border: none;
+}
+
+.contaner-faixa_de_preço {
+    grid-column-start: 2;
+    grid-row-start: 4;
+    width: 70vw;
+    height: 7vh;
+    background-color: rgb(217, 217, 217, 100);
+    padding: 0.5vmin;
+    border-radius: 8px;
+}
+#logo-banner{
+    width: 15vmin;
+    position: absolute;
+    right: 3vmin;
 }
