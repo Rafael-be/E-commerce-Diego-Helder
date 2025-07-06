@@ -162,7 +162,7 @@ ul h1,
     position: relative;
     display: grid;
     grid-template-columns: 15vmin auto 15vmin;
-    grid-template-rows: 5vmin 15vh 5vmin 15vh;
+    grid-template-rows: 5vmin 15vh 5vmin 15vh 5vmin auto;
     min-width: 0; 
 }
 
@@ -204,3 +204,41 @@ ul h1,
     position: absolute;
     right: 3vmin;
 }
+.contaner-faixa_de_preço{
+    position: relative;
+    display: flex;
+    flex-wrap: nowrap;
+    overflow: hidden;
+}
+.contaner-faixa_de_preço h1{
+    display: block;
+}
+.container_input{
+    position: absolute;
+    left: 37vmin;
+    top: 50%;
+    transform: translateY(-45%);
+}
+#arrastar{
+    width: 35vmin;
+}
+.numero{
+    font-size: 2.3vmin;
+}
+
+.itens{
+    grid-row-start: 6;
+    grid-column-start: 2;
+
+}
+.galeria{
+    display: flex;
+    justify-content: space-between;
+}   
+.item{
+    width: 39vmin;
+    height: 39vmin;
+    background-color: rgb(217, 217, 217, 100);
+    border-radius: 22px;
+}
+

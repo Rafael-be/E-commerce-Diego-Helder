@@ -6,6 +6,7 @@
     <title>Document</title>
     <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
 
     <section class="header">
@@ -69,20 +70,41 @@
 
 
         <div class="contaner-faixa_de_preço">
-            <label for="price-slider">Faixa de preço</label>
-                <div class="range-container">
-                    <input type="range" min="0" max="50000" step="100" value="2500" id="price-slider">
-                    <output for="price-slider" id="price-value">R$2500</output>
-        </div>
-        </div>
-
+            <h1>Faixa de preço</h1>
+                <div class="container_input">
+                    <output for="arrastar" class="numero">R$0</output>
+                    <input type="range" min="0" max="50000" step="100" value="4500" id="arrastar">
+                    <output for="arrastar" id="valor" class="numero">R$2500</output>
+                </div>
+         </div>
 
         <div class="itens">
+            <div class="galeria">
+                <div class="item" id="item1">
+                    <img src="img/pc.png">
+                </div>
 
+
+                <div class="item" id="item2">
+
+                </div>
+
+
+                <div class="item" id="item3">
+
+                </div>
+            </div>
         </div>
+</section>
 
-    </section>
+<script>
+    const arrastador = document.getElementById("arrastar");
+    const saida = document.getElementById("valor");
 
+    arrastador.addEventListener("input", () => {
+        saida.textContent = `R$${parseInt(arrastador.value).toLocaleString('pt-BR')}`;
+    });
+</script>
 
 </body>
 </html>
