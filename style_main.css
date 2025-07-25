@@ -162,7 +162,7 @@ ul h1,
 .container-banner {
     margin-left: 6vw;
     margin-top: 5vh;
-    width: 70vw;
+    width: 60vw;
     height: 17vh;          
     background-color: rgb(217, 217, 217, 100);
     overflow: hidden;
@@ -185,7 +185,7 @@ ul h1,
     position: relative;
     display: flex;
     margin-left: 6vw;
-    width: 70vw;    
+    width: 60vw;    
     min-height: 7vh;
     margin-top: 3.5vh;
     background-color: rgb(217, 217, 217, 100);
@@ -230,7 +230,7 @@ ul h1,
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
-    width: 70vw;
+    width: 60vw;
 
 }   
 .item{

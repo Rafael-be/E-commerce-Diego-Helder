@@ -159,23 +159,7 @@ ul h1,
     flex-wrap: wrap;
 }
 
-.container-banner {
-    margin-left: 6vw;
-    margin-top: 5vh;
-    width: 70vw;
-    height: 17vh;          
-    background-color: rgb(217, 217, 217, 100);
-    overflow: hidden;
-    overflow-wrap: break-word;
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-    padding: 1vmin;
-    border-radius: 8px;
-    position: relative;
-}
-
-.container-banner h1, .contaner-faixa_de_preço h1 {
+ .contaner-faixa_de_preço h1 {
     font-size: 5vh;
     border: none;
     max-width: 70%;
@@ -185,7 +169,7 @@ ul h1,
     position: relative;
     display: flex;
     margin-left: 6vw;
-    width: 70vw;    
+    width: 60vw;    
     min-height: 7vh;
     margin-top: 3.5vh;
     background-color: rgb(217, 217, 217, 100);
@@ -230,20 +214,43 @@ ul h1,
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
-    width: 70vw;
-
+    max-width: 60vw;
 }   
 .item{
-    width: 18vw;
+    width: 16vw;
+    height: 27vh;
     background-color: rgb(217, 217, 217, 100);
     border-radius: 22px;
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-bottom: 3vmin;
+    margin-bottom: 1vmin;
     padding-left: 6px;
 }
 .imagens{
-    width: 20vw;
+    max-width: 12vw;
+    min-height: 12vh;
+    display: block;
 }
+.envolta{
+    width: 16vw;
+    max-width: 16vw;
+    border-radius: 22px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    margin-bottom: 3vmin;
+    flex-direction: column;
+    /*outline: dashed red;*/
+}
+.envolta p{
+    color: rgb(255, 255, 255);
+    text-align: left;
+    margin-left: 0.4vw;
+    font-size: 2.5vmin;
+    display: block;
 
+}
+.preco{
+    margin-top: 0.5vmin;
+}
