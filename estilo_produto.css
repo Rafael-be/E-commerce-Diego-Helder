@@ -119,8 +119,7 @@ body {
     text-decoration: none;
 }
 
-.navbar li,
-h1 {
+.navbar li,h1 {
     border-bottom: 1px solid white;
 }
 
@@ -131,8 +130,7 @@ h1 {
     display: block;
 }
 
-ul h1,
-#periferico {
+ul h1, #periferico {
     display: block;
     padding: 15px;
     color: white;
@@ -159,66 +157,22 @@ ul h1,
     flex-wrap: wrap;
 }
 
- .contaner-faixa_de_preço h1 {
-    font-size: 5vh;
-    border: none;
-    max-width: 70%;
-}
-
-.contaner-faixa_de_preço {
-    position: relative;
-    display: flex;
-    margin-left: 6vw;
-    width: 60vw;    
-    min-height: 7vh;
-    margin-top: 3.5vh;
-    background-color: rgb(217, 217, 217, 100);
-    padding: 0.5vmin;
-    border-radius: 8px;
-    flex-wrap: wrap;
-}
-#logo-banner{
-    width: 15vmin;
-    position: absolute;
-    right: 3vmin;
-    display: block;
-    margin-left: 5vmin;
-}
-.contaner-faixa_de_preço h1{
-    display: block;
-}
-.container_input{
-    position: absolute;
-    right: 7vmin;
-    top: 50%;
-    transform: translateY(-45%);
-    display: flex;
-    align-items: center;
-    flex-wrap: wrap;
-}
-
-#arrastar{
-    width: 20vw;
-}
-.numero{
-    font-size: 3vh;
-    padding: 5px;
-}
-
 .itens{
     margin-left: 6vw;
     margin-top: 3.5vh;
-
-}
-.galeria{
+    max-width: 64vw;
     display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
-    max-width: 60vw;
+}
+.produto{
+    display: flex;
+    flex-direction: column;
+    width: 42%;
+    max-width: 42%;
+    flex-wrap: nowrap;
 }   
 .item{
-    width: 16vw;
-    height: 27vh;
+    width: 26.8vw;
+    height: 42vh;
     background-color: rgb(217, 217, 217, 100);
     border-radius: 22px;
     display: flex;
@@ -228,8 +182,8 @@ ul h1,
     padding-left: 6px;
 }
 .imagens{
-    max-width: 12vw;
-    min-height: 12vh;
+    max-width: 35vw;
+    min-height: 35vh;
     display: block;
 }
 .envolta{
@@ -250,6 +204,47 @@ ul h1,
     display: block;
 
 }
+
+.legenda{
+    width: 26vw;
+    max-width: 26.8vw;
+}
+#especifica{
+    font-size: 3vmin;
+    font-family: 'Inter', sans-serif;
+    font-weight: 50;
+}
+#titulo{
+   font-size: 4vmin;
+   font-family: 'Inter', sans-serif;
+   margin-bottom: 1vmin;
+   font-weight: bold;
+}
+.descricao{
+    margin-left: 7vw;
+    width: 48%;
+    max-width: 49%;
+}
+#nome{
+    color: white;
+    font-size: 4vmin;
+    margin-bottom: 4vmin;
+}
 .preco{
-    margin-top: 0.5vmin;
+   width: 65%;
+   position: relative;
+   margin-bottom: 3vmin;
+}
+.preco_num{
+    font-size: 6vmin;
+}
+.imagem{
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+}
+.img{
+    width: 8vh;
+
 }
