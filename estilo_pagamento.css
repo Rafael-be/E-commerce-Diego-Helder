@@ -1,0 +1,101 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background-color: rgb(80, 80, 80, 100%);
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-evenly;
+    margin-top: 5vmin;
+}
+.container_um{
+    outline: dashed red;
+    width: 37%;
+    font-size: 5vmin;
+    font-weight: 400;
+    font-family: 'Inter', sans-serif;
+    background-color: rgb(255, 255, 255);
+    border-radius: 10px;
+    display: flex;
+   line-height: 5vmin;
+}
+.label_input{
+    display: block; 
+    margin-bottom: 1vmin; 
+    cursor: pointer;
+}
+#CEP, #endereco, #numero{
+    vertical-align: top;
+    padding: 8px;
+    font-size: 3vmin;
+    border: 1px solid black;
+    border-radius: 10px;
+    margin-bottom: 1vmin;
+}
+.frete, form{
+    width: 100%;}
+.frete{
+    margin-bottom: 1vmin;
+}
+.opcao{
+    border: 1px solid black;
+    display: flex;
+    flex-direction: column;
+    font-size: 3vmin;
+    font-weight: 400;
+    color: rgba(0, 0, 0, 0.657);
+    width: 70%;
+}
+.margem{
+    margin: 3vmin 5vmin 3vmin 5vmin;
+}
+.opcao:nth-child(3){
+    border-top: none;
+    border-bottom: none;
+}
+.linha_um{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.linha_um, .sub{
+    margin: 0.5vmin 1vmin 0vmin 1vmin;
+}
+.sub{
+    font-size: 2vmin;
+    line-height: 2vmin;
+    margin-top: 0;
+}
+.radio_checkbox{
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  width: 3vmin;
+  height: 3vmin;
+  border: 2px solid rgba(0, 0, 0, 0.657);
+  border-radius: 3px;
+  position: relative;
+  cursor: pointer;
+  
+}
+.radio_checkbox:checked::after {
+  content: "X";
+  color: rgba(0, 0, 0, 0.657);
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2vmin;
+}
+
+
+.container_dois{
+    outline: dashed blue;
+    width: 35%;
+}
