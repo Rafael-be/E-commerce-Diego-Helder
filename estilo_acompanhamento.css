@@ -3,3 +3,88 @@
     padding: 0;
     box-sizing: border-box;
 }
+body{
+    background-color: rgb(80, 80, 80, 100%);
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-evenly;
+    margin-top: 5vmin;
+}
+.quadrado_um{
+    width: 37%;
+    display: flex;
+    flex-direction: column;
+    font-size: 5vmin;
+    color: white; 
+    font-family: 'Inter', sans-serif;
+}
+#titulo{
+    font-weight: 800;
+    margin-top: 0;
+}
+.container_img{
+    width: 65%;
+    height: 37vh;
+    background-color: rgb(255, 255, 255);
+    display: flex;
+    justify-content: center;
+    border-radius: 10px;
+}
+.quadrado_um p, .container_img{
+    margin: 2vmin;
+}
+.quadrado_dois{
+    width: 40%;
+    font-family: 'Inter', sans-serif;
+    font-weight: 400;
+}
+.container{
+    background-color: rgba(255, 255, 255, 0.701);
+    padding: 10px;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    font-size: 4vmin;
+    line-height: 9vmin;
+    font-weight: 700;
+}
+.status{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 80%;
+}
+
+.imagens{
+    display: flex;
+    gap: 1vmin;
+    margin-top: 2vmin;
+    width: 100%;
+    justify-content: center;
+}
+.rastreamento{
+    margin-top: 3.5vmin;
+}
+.bola{
+    width: 15vmin;
+    aspect-ratio: 1/1;
+    border-radius: 50%;
+    background-color: rgb(0, 255, 38);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.margem{
+    margin: 3vmin 5vmin 3vmin 5vmin;
+}
+#pix{
+    width: 6vmin;
+    aspect-ratio: 0.938;
+}
+#confirmado{
+    width: 5.5vmin;
+    aspect-ratio: 1/1;
+}
+.imagem{
+    width: 10vmin;
+}
