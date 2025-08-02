@@ -15,7 +15,7 @@ body{
     display: flex;
     flex-direction: column;
     font-size: 5vmin;
-    color: white;
+    color: white; 
     font-family: 'Inter', sans-serif;
 }
 #titulo{

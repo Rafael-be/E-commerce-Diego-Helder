@@ -11,7 +11,6 @@ body{
     margin-top: 5vmin;
 }
 .container_um{
-    outline: dashed red;
     width: 37%;
     font-size: 5vmin;
     font-weight: 400;
@@ -88,7 +87,6 @@ body{
   border-radius: 3px;
   position: relative;
   cursor: pointer;
-  
 }
 .radio_checkbox:checked::after {
   content: "X";
@@ -104,8 +102,58 @@ body{
   font-size: 2vmin;
 }
 
-
 .container_dois{
-    outline: dashed blue;
     width: 35%;
+    font-size: 5vmin;
+    font-weight: 400;
+    font-family: 'Inter', sans-serif;
+    background-color: rgb(255, 255, 255);
+    border-radius: 10px;
+    line-height: 8vmin;
+    gap: 1rem;
 }
+.valor{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    font-size: 5vmin;
+    width: 100%;
+    justify-content: space-between;
+}
+#pix, #cartão{
+  width: 6vmin;
+}
+#boleto{
+    width: 5vmin;
+    margin-left: 0.4vmin;
+}
+.informações{
+  display: flex;
+  align-items: center;
+  gap: 3vmin; 
+}
+button{
+    width: 70%;
+    padding: 12px;
+    border-radius: 10px;
+    margin-top: 3vmin;
+    background-color: rgb(0, 255, 38);
+    color: rgb(217, 217, 217);
+    font-size: 5vmin;
+    cursor: pointer;
+    font-weight: 800;
+}
+.espaco{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+.Valor{
+    margin-top: 2vmin;
+    line-height: 5vmin;
+}
+#menor{
+    font-size: 4vmin;
+}
+#valor_pix{color: rgb(1, 189, 174);}
+#valor_cartao{color: rgb(158, 185, 214);}
