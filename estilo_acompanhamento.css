@@ -28,7 +28,14 @@ body{
     background-color: rgb(255, 255, 255);
     display: flex;
     justify-content: center;
+    align-items: center; 
     border-radius: 10px;
+    overflow: hidden; 
+}
+.container_img img {
+    max-width: 100%; 
+    max-height: 100%; 
+    object-fit: contain; 
 }
 .quadrado_um p, .container_img{
     margin: 2vmin;
@@ -57,7 +64,7 @@ body{
 
 .imagens{
     display: flex;
-    gap: 1vmin;
+    gap: 2vmin;
     margin-top: 2vmin;
     width: 100%;
     justify-content: center;
@@ -66,13 +73,20 @@ body{
     margin-top: 3.5vmin;
 }
 .bola{
-    width: 15vmin;
+    width: clamp(50px, 12vmin, 150px); 
     aspect-ratio: 1/1;
     border-radius: 50%;
     background-color: rgb(0, 255, 38);
     display: flex;
     align-items: center;
     justify-content: center;
+    overflow: hidden;
+    border: 1px solid black;
+}
+.bola img{
+    width: 70%;
+    height: 70%; 
+    object-fit: contain;
 }
 .margem{
     margin: 3vmin 5vmin 3vmin 5vmin;
@@ -85,6 +99,85 @@ body{
     width: 5.5vmin;
     aspect-ratio: 1/1;
 }
+#branco{
+    background-color: rgba(255, 255, 255, 0.398);
+}
 .imagem{
-    width: 10vmin;
+    width: 10vmin; 
+}
+#pedido{
+    width: 9vmin;
+    margin-left: 1vmin;
+}
+#fab{
+    width: 16vmin;
+}
+#frete{
+    width: 12vmin;
+}
+#casa{
+    width: 9vmin;
+}
+.legenda {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    width: clamp(50px, 15vmin, 150px); 
+}
+.texto{
+    font-size: clamp(10px, 2vmin, 16px);
+    line-height: 2vmin;
+}
+@media (max-width: 768px) {
+    body {
+        flex-direction: column;
+        align-items: center;
+        margin-top: 3vmin;
+    }
+
+    .quadrado_um,
+    .quadrado_dois {
+        width: 90%;
+        font-size: 4vmin;
+    }
+
+    .container_img {
+        width: 97%;
+        height: 30vh;
+    }
+
+    .container {
+        font-size: 3.5vmin;
+        line-height: 7vmin;
+    }
+
+    .status {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 1vmin;
+        width: 100%;
+    }
+
+    .imagens {
+        flex-wrap: wrap;
+        gap: 3vmin;
+    }
+
+    .legenda {
+        width: clamp(50px, 22vmin, 150px);
+    }
+
+    .bola {
+        width: clamp(50px, 20vmin, 150px);
+    }
+
+    .texto {
+        font-size: clamp(12px, 2.5vmin, 18px);
+        line-height: 1.5;
+    }
+
+    #pix, #confirmado, .imagem {
+        width: 8vmin;
+    }
 }
