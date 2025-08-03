@@ -392,17 +392,3 @@ ul h1,
     }
 }
 
-.menu-toggle {
-    display: none;
-    font-size: 24px;
-    color: white;
-    background: rgba(0,0,0,0.5);
-    padding: 10px;
-    border-radius: 5px;
-}
-
-@media screen and (max-width: 768px) {
-    .menu-toggle {
-        display: block;
-    }
-}
