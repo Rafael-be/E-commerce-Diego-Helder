@@ -95,3 +95,45 @@ p{
     right: 2px;
     color: rgb(10, 48, 67);;
 }
+
+@media screen and (max-width: 768px){
+    .container{
+        height: 80vh;
+        width: 95vw;
+    }
+
+    .quadrado_cinza{
+        width: 90%;
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+    }
+
+    #logo{
+        width: 15vmax;
+        margin-left: 2vmin;
+    }
+
+    #nome{
+        font-size: 5vmin;
+    }
+
+    .formulario{
+        width: 90%;
+    }
+
+    .formulario input{
+        padding: 20px;
+    }
+
+    .formulario label{
+        font-size: 4vmin;
+    }
+
+    #ja_possui{
+        font-size: 3.5vmin;
+    }
+
+
+
+}
