@@ -26,24 +26,26 @@ body {
     grid-area: header;
     background-color: rgb(110, 110, 110, 100);
     width: 100%;
-    position: relative;
-    display: flex; 
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
     align-items: center;
     overflow: hidden;
     border-bottom: 1px solid white;
 }
-
-.pesquisa {
-    margin-left: 3vmin;
-    position: absolute;
-    left: 15vw;
-    width: 30vw;
+.separar{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 72vw;
 }
-
+.pesquisa{
+    position: relative;
+}
 .pesquisa input {
     width: 100%;
     max-width: 43vw;
-    min-width: 100px;
+    min-width: 27vw;
     padding: 2vmin;
     background-color: rgb(217, 217, 217, 100);
     border-radius: 35px;
@@ -59,17 +61,6 @@ body {
     border: none;
     outline: none;
 }
-
-.logo {
-    display: flex;
-    position: absolute;
-    left: 2vw;
-}
-
-#img_logo {
-    width: 10vmin;
-}
-
 #lupa {
     width: 5vmin;
     position: absolute;
@@ -78,27 +69,23 @@ body {
     transform: translateY(-50%);
     pointer-events: none;
 }
+#img_logo {
+    width: 10vmin;
+}
+.fim{
+    display: flex;
+    gap: 3vw;
+}
+.logo{
+    display: flex;
+    width: 23vw;
+    margin-left: 2vw;
+}
 .container_conta img {
     width: 8vmin;
-
 }
-
 .container_carrinho img {
     width: 7vmin;
-}
-
-.container_conta {
-    position: absolute;
-    right: 25vh;
-    display: flex;
-
-}
-
-.container_carrinho {
-    position: absolute;
-    right: 1vh;
-    display: flex;
-    padding-right: 9vmin; 
 }
 
 .aside {
@@ -163,16 +150,19 @@ ul h1,
     margin-left: 6vw;
     margin-top: 5vh;
     width: 60vw;
-    height: 17vh;          
+    height: 18vh;          
     background-color: rgb(217, 217, 217, 100);
     overflow: hidden;
     overflow-wrap: break-word;
     display: flex;
-    justify-content: center;
-    flex-direction: column;
-    padding: 1vmin;
+    align-items: center;
     border-radius: 8px;
-    position: relative;
+    padding: 2vmin;
+    justify-content: space-between;
+    
+}
+.Texto_banner{
+    margin: 0;
 }
 
 .container-banner h1, .contaner-faixa_de_preço h1 {
@@ -182,8 +172,9 @@ ul h1,
 }
 
 .contaner-faixa_de_preço {
-    position: relative;
     display: flex;
+    flex-direction: row;
+    justify-content: space-between;
     margin-left: 6vw;
     width: 60vw;    
     min-height: 7vh;
@@ -195,19 +186,13 @@ ul h1,
 }
 #logo-banner{
     width: 15vmin;
-    position: absolute;
     right: 3vmin;
-    display: block;
     margin-left: 5vmin;
 }
 .contaner-faixa_de_preço h1{
     display: block;
 }
 .container_input{
-    position: absolute;
-    right: 7vmin;
-    top: 50%;
-    transform: translateY(-45%);
     display: flex;
     align-items: center;
     flex-wrap: wrap;
@@ -235,15 +220,189 @@ ul h1,
 }   
 .item{
     width: 18vw;
-    background-color: rgb(217, 217, 217, 100);
     border-radius: 22px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    font-size: 3vmin;
+    margin-bottom: 3vmin;
+    color: rgb(255, 255, 255);
+}
+#pc{
+    margin-left: 2vmin;
+    width: 22vmin;
+    height: 22vmin;
+}   
+#desktop{
+    width: 25vmin;
+    height: 20vmin;
+}
+#note{
+    width: 22vmin;
+    height: 20vmin;
+}
+.item_imagem{
+    width: 100%;
+    height: 80%;
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-bottom: 3vmin;
-    padding-left: 6px;
-}
-.imagens{
-    width: 20vw;
+    background-color: rgb(217, 217, 217, 100);
+    border-radius: 22px;
+    margin-bottom: 1vmin;
 }
 
+
+
+
+
+@media screen and (max-width: 768px) {
+    body {
+        grid-template-areas:
+            "header"
+            "main";
+        grid-template-rows: 10vh 1fr;
+        grid-template-columns: 1fr;
+    }
+
+    /* HEADER - Versão Mobile */
+    .header {
+        align-items: center;
+    
+    }
+
+    .logo {
+        display: none;
+    }
+
+    .separar {
+        width: 100%;
+        flex-direction: row;
+        gap: 15px;
+        align-items: center;
+        margin-left: 8vw;
+        margin-right: 1vw;
+    }
+
+    .pesquisa input {
+        max-width: 100%;
+        min-width: 60vw;
+        font-size: 16px;
+        padding: 10px;
+    }
+
+    .pesquisa input::placeholder {
+        font-size: 16px;
+    }
+
+    #lupa {
+        width: 5vmin;
+        right: 10px;
+    }
+
+    .fim {
+        width: 100%;
+        justify-content: space-around;
+        gap: 0;
+    }
+
+    .container_conta img {
+        width: 35px;
+    }
+    .container_carrinho img {
+        width: 30px;
+        margin-top: 0.5vmin;
+    }
+
+    .aside{
+        display: none;
+    }
+    /* MAIN - Ajustes para mobile */
+    .main {
+        padding: 10px;
+    }
+
+    .container-banner,
+    .contaner-faixa_de_preço,
+    .galeria {
+        width: 100%;
+        margin-left: 0;
+    }
+
+    .container-banner {
+        display: flex;
+        flex-direction: row;
+        height: auto;
+        padding: 15px;
+        max-width: 92%;
+        margin: 3vmin 4vmin 0 4vmin;
+    }
+
+    .container-banner h1,
+    .contaner-faixa_de_preço h1 {
+        font-size: 24px;
+    }
+
+    #logo-banner {
+        position: static;
+        width: 80px;
+        margin: 10px auto;
+        display: block;
+    }
+
+    .contaner-faixa_de_preço {
+        flex-direction: column;
+        padding: 15px;
+        max-width: 92%;
+        margin: 3vmin 4vmin 0 4vmin;
+    }
+
+    .numero{
+        font-size: 5vmin;
+        padding: 0;
+    }
+
+    #arrastar {
+        width: 100%;
+        margin: 10px 0;
+        margin: 0;
+    }
+
+    .itens{
+        margin-top: 3vmin;
+        margin-left: 0;
+    }
+
+    .galeria {
+        gap: 15px;
+        display: flex;
+        flex-direction: row;
+    }
+
+    .item {
+        margin: 0 4vmin 1vmin 4vmin;
+        width: 50%;
+        max-width: 150px;
+        margin-bottom: 15px;
+    }
+
+    .imagens {
+        width: 100%;
+        max-width: 250px;
+    }
+}
+
+.menu-toggle {
+    display: none;
+    font-size: 24px;
+    color: white;
+    background: rgba(0,0,0,0.5);
+    padding: 10px;
+    border-radius: 5px;
+}
+
+@media screen and (max-width: 768px) {
+    .menu-toggle {
+        display: block;
+    }
+}

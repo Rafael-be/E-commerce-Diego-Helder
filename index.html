@@ -15,17 +15,23 @@
             <img src="img/logo.png" id="img_logo">
         </div>
 
-        <div class="pesquisa">
-            <input type="text" placeholder="Digite o que você busca...">
-            <img src="img/lupa.png" id="lupa">
-        </div>
+        <div class="separar">
+            <div class="inicio">
+                <div class="pesquisa">
+                    <input type="text" placeholder="Digite o que você busca...">
+                    <img src="img/lupa.png" id="lupa">
+                </div>
+            </div>
 
-        <div class="container_conta">
-            <img src="img/conta.png" id="conta">
-        </div>
+            <div class="fim">
+                <div class="container_conta">
+                    <img src="img/conta.png" id="conta">
+                </div>
 
-        <div class="container_carrinho">
-            <img src="img/carrinho.png" id="carrinho">
+                <div class="container_carrinho">
+                    <img src="img/carrinho.png" id="carrinho">
+                </div>
+            </div>
         </div>
 
     </section>
@@ -63,9 +69,13 @@
     <section class="main">
         
         <div class="container-banner">
-            <h1>INFO PC'S</h1>
-            <h1>SEU PRÓXIMO PC ESTÁ AQUI</h1>
-            <img src="img/logo.png" id="logo-banner">
+            <div class="Texto_banner">
+                <h1>INFO PC'S</h1>
+                <h1>SEU PRÓXIMO PC ESTÁ AQUI</h1>
+            </div>
+            <div class="imagem_banner">
+                <img src="img/logo.png" id="logo-banner">
+            </div>
         </div>
 
         <div class="contaner-faixa_de_preço">
@@ -80,17 +90,29 @@
          <div class="itens">
             <div class="galeria">
                 <div class="item" id="item1">
-                    <img src="img/pc.png" class="imagens" id="pc">
+                    <div class="item_imagem">
+                        <img src="img/pc.png" class="imagens" id="pc">
+                    </div>
+                    <div class="titulo_item"><p>Computador gamer intel core I5</p></div>
+                    <div class="preco_item"><p>R$ 3899,00</p></div>
                 </div>
 
 
                 <div class="item" id="item2">
-
+                    <div class="item_imagem">
+                        <img src="img/pc_completo.png" class="imagens" id="desktop">
+                    </div>
+                    <div class="titulo_item"><p>Computador gamer intel core I5</p></div>
+                    <div class="preco_item"><p>R$ 3899,00</p></div>
                 </div>
 
 
                 <div class="item" id="item3">
-
+                    <div class="item_imagem">
+                        <img src="img/note.png" class="imagens" id="note">
+                    </div>
+                    <div class="titulo_item"><p>Computador gamer intel core I5</p></div>
+                    <div class="preco_item"><p>R$ 3899,00</p></div>
                 </div>
 
             </div>
@@ -106,6 +128,7 @@
         saida.textContent = `R$${parseInt(arrastador.value).toLocaleString('pt-BR')}`;
     });
 </script>
+
 
 </body>
 </html>
