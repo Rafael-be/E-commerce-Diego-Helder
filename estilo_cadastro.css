@@ -1,10 +1,21 @@
+/* RESET GERAL
+   - Remove margens e preenchimentos padrão
+   - Define box-sizing e remove sublinhado de links
+*/
 *{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    text-decoration: none
+    text-decoration: none;
 }
+
+/* IMPORTAÇÃO DE FONTE */
 @import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
+/* BLOCO PRINCIPAL DA PÁGINA
+   - Centraliza o conteúdo na tela
+   - Fundo escuro e altura de tela cheia
+*/
 .quadrado{
     width: 100vw;
     height: 100vh;
@@ -13,6 +24,11 @@
     justify-content: center;
     align-items: center;
 }
+
+/* CONTAINER CENTRAL
+   - Caixa clara com cantos arredondados
+   - Responsável por agrupar conteúdo
+*/
 .container{
     background-color: rgb(217, 217, 217, 100%);
     width: 35vmax;
@@ -20,6 +36,11 @@
     border-radius: 19px;
     position: relative;
 }
+
+/* BLOCO INTERNO CINZA
+   - Centralizado horizontalmente
+   - Exibe ícone e nome estilizado
+*/
 .quadrado_cinza{
     background-color: rgb(80, 80, 80, 100%);
     width: 78%;
@@ -34,15 +55,24 @@
     justify-content: center;
     border-radius: 15px;
 }
+
+/* Estilização da logo, ajustando o tamanho dela */
 #logo{
     width: 26%;
     display: block;
 }
+
+/* ESTILIZAÇÃO DO TEXTO */
 #nome{
     font-family: "Inter", sans-serif;
     color: white;
     font-size: 4.4vmin;
 }
+
+/* BLOCO DO FORMULÁRIO
+   - Posicionado na parte inferior do container
+   - Alinhado ao centro
+*/
 .formulario{
     width: 78%;
     height: 63%;
@@ -52,12 +82,18 @@
     transform: translateX(-50%);
 }
 
+/* INPUTS INDIVIDUAIS DE E-MAIL E SENHA (posições relativas para labels flutuantes) */
 .input_email{
     position: relative;
 }
 .input_senha{
     position: relative;
 }
+
+/* CAMPOS DE TEXTO DO FORMULÁRIO
+   - Borda arredondada
+   - Margem inferior entre campos
+*/
 input{
   width: 100%;
   padding: 2vmin 4vmin;
@@ -67,6 +103,11 @@ input{
   background: transparent;
   margin-bottom: 8%;
 }
+
+/* LABEL FLUTUANTE SOBRE INPUT
+   - Usa position absolute
+   - Aparece sobre o campo com fundo
+*/
 .label_input{
   font-family: "Inter", sans-serif;
   position: absolute;
@@ -74,14 +115,21 @@ input{
   left: 20px;
   background: rgb(217, 217, 217, 100%);
   padding: 0 5px;
-  font-weight:bolder ;
+  font-weight: bolder;
   transform: translateY(-60%);
   font-size: 2vmin;
   z-index: 1;
 }
+
+/* LINKS PARA PAGINA DE LOGIN */
 a{
     color: rgb(10, 48, 67);
 }
+
+/* BOTÃO DE ENVIO
+   - Largo, com padding generoso
+   - Cor sólida e texto branco
+*/
 button{
     width: 100%;
     padding: 2vmin;
@@ -92,20 +140,26 @@ button{
     position: relative;
     cursor: pointer;
 }
+
+/* ESTILO DO PARAGRAFO */
 p{
     position: absolute;
     font-size: 2vmin;
     bottom: -30px;
     right: 2px;
-    color: rgb(10, 48, 67);;
+    color: rgb(10, 48, 67);
 }
 
+/* RESPONSIVO PARA TELAS PEQUENAS */
 @media screen and (max-width: 768px){
+
+    /* Container ocupa quase toda a tela */
     .container{
         height: 80vh;
         width: 95vw;
     }
 
+    /* Bloco cinza se expande e alinha à esquerda */
     .quadrado_cinza{
         width: 90%;
         display: flex;
@@ -113,31 +167,34 @@ p{
         align-items: center;
     }
 
+    /* Reduz tamanho visual do elemento gráfico */
     #logo{
         width: 15vmax;
         margin-left: 2vmin;
     }
 
+    /* Ajusta tamanho do nome/texto superior */
     #nome{
         font-size: 5vmin;
     }
 
+    /* Formulário ocupa mais largura */
     .formulario{
         width: 90%;
     }
 
+    /* Inputs maiores para touch */
     .formulario input{
         padding: 20px;
     }
 
+    /* Label maior no mobile */
     .formulario label{
         font-size: 4vmin;
     }
 
+    /* Texto pequeno no canto inferior */
     #ja_possui{
         font-size: 3.5vmin;
     }
-
-
-
 }

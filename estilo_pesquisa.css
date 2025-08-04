@@ -1,3 +1,4 @@
+/* Reset global - remove margens, paddings e define box model */
 * {
     margin: 0;
     padding: 0;
@@ -5,24 +6,27 @@
     text-decoration: none;
 }
 
+/* Configurações base do documento */
 html, body {
-    height: 100%;
-    width: 100%;
-    scroll-behavior: smooth;
+    height: 100%; /* Ocupa 100% da altura da viewport */
+    width: 100%; /* Ocupa 100% da largura */
+    scroll-behavior: smooth; /* Rolagem suave */
     font-family: Arial, Helvetica, sans-serif;
     font-size: 16px;
-    overflow-x: hidden;
+    overflow-x: hidden; /* Evita scroll horizontal */
 }
 
+/* Layout principal usando CSS Grid */
 body {
     display: grid;
     grid-template-areas:
-        "header header"
-        "aside main";
-    grid-template-rows: 12vh 1fr;
-    grid-template-columns: 25vw 1fr;
+        "header header"  /* Cabeçalho ocupa toda a linha superior */
+        "aside main";    /* Layout com aside e main lado a lado */
+    grid-template-rows: 12vh 1fr; /* Altura fixa para header e flexível para o resto */
+    grid-template-columns: 25vw 1fr; /* Aside com 25% da largura */
 }
 
+/* Estilização do cabeçalho */
 .header {
     grid-area: header;
     background-color: rgb(110, 110, 110, 100);
@@ -34,14 +38,18 @@ body {
     overflow: hidden;
     border-bottom: 1px solid white;
 }
-.separar{
+
+/* Container interno do header para logo e itens */
+.separar {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    width: 72vw;
+    width: 72vw; /* Largura relativa à viewport */
 }
-.pesquisa{
-    position: relative;
+
+/* Estilização da barra de pesquisa */
+.pesquisa {
+    position: relative; /* Permite posicionamento absoluto da lupa */
 }
 .pesquisa input {
     width: 100%;
@@ -54,33 +62,41 @@ body {
     font-size: 2vmin;
 }
 
+/* Estilo do placeholder */
 .pesquisa input::placeholder {
     font-size: 2vmin;
 }
 
+/* Remove outline ao focar */
 .pesquisa input:focus {
     border: none;
     outline: none;
 }
+
+/* Ícone da lupa (posicionamento absoluto) */
 #lupa {
     width: 5vmin;
     position: absolute;
     top: 50%;
     right: 0.7vmin;
     transform: translateY(-50%);
-    pointer-events: none;
+    pointer-events: none; /* Permite clicar através do ícone */
 }
+
+/* Estilização da logo */
 #img_logo {
     width: 10vmin;
 }
-.fim{
-    display: flex;
-    gap: 3vw;
-}
-.logo{
+.logo {
     display: flex;
     width: 23vw;
     margin-left: 2vw;
+}
+
+/* Container dos ícones do cabeçalho */
+.fim {
+    display: flex;
+    gap: 3vw;
 }
 .container_conta img {
     width: 8vmin;
@@ -89,6 +105,7 @@ body {
     width: 7vmin;
 }
 
+/* Menu lateral (aside) */
 .aside {
     grid-area: aside;
     background-color: rgb(80, 80, 80, 100);
@@ -97,21 +114,20 @@ body {
     border-right: 1px solid white;
 }
 
+/* Navegação do menu lateral */
 .navbar {
     font-size: 3vmin;
     overflow-wrap: break-word;
 }
-
 .navbar ul {
     padding: 0px;
     text-decoration: none;
 }
 
-.navbar li,
-h1 {
+/* Itens do menu */
+.navbar li, h1 {
     border-bottom: 1px solid white;
 }
-
 .navbar a {
     color: white;
     text-decoration: none;
@@ -119,25 +135,29 @@ h1 {
     display: block;
 }
 
-ul h1,
-#periferico {
+/* Títulos e itens especiais */
+ul h1, #periferico {
     display: block;
     padding: 15px;
     color: white;
 }
 
-.submenu,
-.submenu-aparece {
+/* Submenu (inicialmente oculto) */
+.submenu, .submenu-aparece {
     display: none;
 }
 
+/* Mostra submenu quando checkbox está marcado */
 .submenu-aparece:checked + label + .submenu {
     display: block;
 }
 
+/* Cursor pointer para itens clicáveis */
 #periferico:hover {
     cursor: pointer;
 }
+
+/* Área de conteúdo principal */
 .main {
     grid-area: main;
     background-color: rgb(48, 48, 48, 100);
@@ -147,12 +167,12 @@ ul h1,
     flex-wrap: wrap;
 }
 
+/* Filtro de preço */
 .contaner-faixa_de_preço h1 {
     font-size: 5vh;
     border: none;
     max-width: 70%;
 }
-
 .contaner-faixa_de_preço {
     display: flex;
     flex-direction: row;
@@ -167,36 +187,34 @@ ul h1,
     flex-wrap: wrap;
 }
 
-.contaner-faixa_de_preço h1{
-    display: block;
-}
-.container_input{
+/* Container do slider de preço */
+.container_input {
     display: flex;
     align-items: center;
     flex-wrap: wrap;
 }
-
-#arrastar{
+#arrastar {
     width: 20vw;
 }
-.numero{
+.numero {
     font-size: 3vh;
     padding: 5px;
 }
 
-.itens{
+/* Galeria de produtos */
+.itens {
     margin-left: 6vw;
     margin-top: 3.5vh;
-
 }
-.galeria{
+.galeria {
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
     width: 60vw;
+}
 
-}   
-.item{
+/* Itens individuais da galeria */
+.item {
     width: 18vw;
     border-radius: 22px;
     display: flex;
@@ -207,45 +225,9 @@ ul h1,
     color: rgb(255, 255, 255);
     cursor: pointer;
 }
-#pc{
-    margin-left: 2vmin;
-    width: 22vmin;
-    height: 22vmin;
-}   
-#desktop{
-    width: 25vmin;
-    height: 20vmin;
-}
-#note{
-    width: 22vmin;
-    height: 20vmin;
-}
-#headset{
-    width: 20vmin;
-    height: 22vmin;
-}
-#monitor{
-    width: 26vmin;
-    height: 20vmin;
-}
-#mouse{
-    width: 20vmin;
-    height: 18vmin;
-}
-#cpu{
-    width: 22vmin;
-    height: 20vmin;
-}
-#gpu{
-    width: 22vmin;
-    height: 20vmin;
-}
-#teclado{
-    width: 22vmin;
-    height: 20vmin;
-}
 
-.item_imagem{
+/* Container das imagens dos produtos */
+.item_imagem {
     width: 100%;
     height: 80%;
     display: flex;
@@ -256,11 +238,20 @@ ul h1,
     margin-bottom: 1vmin;
 }
 
+/* Tamanhos específicos para cada imagem de produto */
+#pc { width: 22vmin; height: 22vmin; margin-left: 2vmin; }
+#desktop { width: 25vmin; height: 20vmin; }
+#note { width: 22vmin; height: 20vmin; }
+#headset { width: 20vmin; height: 22vmin; }
+#monitor { width: 26vmin; height: 20vmin; }
+#mouse { width: 20vmin; height: 18vmin; }
+#cpu { width: 22vmin; height: 20vmin; }
+#gpu { width: 22vmin; height: 20vmin; }
+#teclado { width: 22vmin; height: 20vmin; }
 
-
-
-
+/* Responsividade para telas menores que 768px */
 @media screen and (max-width: 768px) {
+    /* Altera layout para coluna única */
     body {
         grid-template-areas:
             "header"
@@ -269,16 +260,9 @@ ul h1,
         grid-template-columns: 1fr;
     }
 
-    /* HEADER - Versão Mobile */
-    .header {
-        align-items: center;
-    
-    }
-
-    .logo {
-        display: none;
-    }
-
+    /* Ajustes do header */
+    .header { align-items: center; }
+    .logo { display: none; }
     .separar {
         width: 100%;
         flex-direction: row;
@@ -288,101 +272,51 @@ ul h1,
         margin-right: 1vw;
     }
 
+    /* Ajustes da barra de pesquisa */
     .pesquisa input {
         max-width: 100%;
         min-width: 60vw;
         font-size: 16px;
         padding: 10px;
     }
-
     .pesquisa input::placeholder {
         font-size: 16px;
     }
-
     #lupa {
         width: 5vmin;
         right: 10px;
     }
 
+    /* Ajustes dos ícones */
     .fim {
         width: 100%;
         justify-content: space-around;
         gap: 0;
     }
+    .container_conta img { width: 35px; }
+    .container_carrinho img { width: 30px; margin-top: 0.5vmin; }
 
-    .container_conta img {
-        width: 35px;
-    }
-    .container_carrinho img {
-        width: 30px;
-        margin-top: 0.5vmin;
-    }
+    /* Esconde menu lateral */
+    .aside { display: none; }
 
-    .aside{
-        display: none;
-    }
-    /* MAIN - Ajustes para mobile */
-    .main {
-        padding: 10px;
-    }
-
+    /* Ajustes do conteúdo principal */
+    .main { padding: 10px; }
     .contaner-faixa_de_preço,
     .galeria {
         width: 100%;
         margin-left: 0;
     }
 
-    .container-banner {
-        display: flex;
-        flex-direction: row;
-        height: auto;
-        padding: 15px;
-        max-width: 92%;
-        margin: 3vmin 4vmin 0 4vmin;
-    }
-
-    .contaner-faixa_de_preço h1 {
-        font-size: 24px;
-    }
-
-    .contaner-faixa_de_preço {
-        flex-direction: column;
-        padding: 15px;
-        max-width: 92%;
-        margin: 3vmin 4vmin 0 4vmin;
-    }
-
-    .numero{
-        font-size: 5vmin;
-        padding: 0;
-    }
-
-    #arrastar {
-        width: 100%;
-        margin: 10px 0;
-        margin: 0;
-    }
-
-    .itens{
-        margin-top: 3vmin;
-        margin-left: 0;
-    }
-
+    /* Ajustes da galeria de produtos */
     .galeria {
         gap: 15px;
         display: flex;
         flex-direction: row;
     }
-
     .item {
         margin: 0 4vmin 1vmin 4vmin;
         width: 50%;
         max-width: 150px;
         margin-bottom: 15px;
-    }
-
-    .imagens {
-        width: 100%;
-        max-width: 250px;
     }
 }

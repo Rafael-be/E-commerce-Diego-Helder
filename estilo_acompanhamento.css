@@ -1,8 +1,18 @@
+/* RESET GERAL
+   - Remove margens e preenchimentos padrão
+   - Define box-sizing para controle do tamanho dos elementos
+*/
 *{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
+
+/* BODY
+   - Display: flex
+   - Alinha elementos horizontalmente com espaço entre eles
+   - Alinha ao topo com um espaçamento superior
+*/
 body{
     background-color: rgb(80, 80, 80, 100%);
     display: flex;
@@ -10,6 +20,12 @@ body{
     justify-content: space-evenly;
     margin-top: 5vmin;
 }
+
+/* QUADRADO 1
+   - Bloco do lado esquerdo
+   - Direção vertical
+   - Estilização de textos e uso da fonte Inter
+*/
 .quadrado_um{
     width: 37%;
     display: flex;
@@ -18,10 +34,18 @@ body{
     color: white; 
     font-family: 'Inter', sans-serif;
 }
+
+/* Título mais grosso (fonte mais pesada) */
 #titulo{
     font-weight: 800;
     margin-top: 0;
 }
+
+/* CONTAINER DE IMAGEM
+   - Fundo branco, bordas arredondadas
+   - Centraliza a imagem
+   - Oculta conteúdo que ultrapassar (overflow: hidden)
+*/
 .container_img{
     width: 65%;
     height: 37vh;
@@ -32,19 +56,38 @@ body{
     border-radius: 10px;
     overflow: hidden; 
 }
+
+/* Imagem dentro do container
+   - Redimensionamento proporcional
+   - Contida dentro do espaço disponível
+*/
 .container_img img {
     max-width: 100%; 
     max-height: 100%; 
     object-fit: contain; 
 }
+
+/* Margem aplicada ao parágrafo e container de imagem */
 .quadrado_um p, .container_img{
     margin: 2vmin;
 }
+
+/* QUADRADO 2
+   - Bloco do lado direito
+   - Fonte Inter e peso 400
+*/
 .quadrado_dois{
     width: 40%;
     font-family: 'Inter', sans-serif;
     font-weight: 400;
 }
+
+/* CONTAINER DE INFORMAÇÕES
+   - Fundo branco semi-transparente
+   - Padding e bordas arredondadas
+   - Fonte grande com espaçamento de linha
+   - Flex column
+*/
 .container{
     background-color: rgba(255, 255, 255, 0.701);
     padding: 10px;
@@ -55,6 +98,11 @@ body{
     line-height: 9vmin;
     font-weight: 700;
 }
+
+/* STATUS
+   - Alinha dois itens com espaço entre eles
+   - Dentro de uma largura reduzida
+*/
 .status{
     display: flex;
     justify-content: space-between;
@@ -62,6 +110,11 @@ body{
     width: 80%;
 }
 
+/* IMAGENS DE RASTREAMENTO
+   - Display flex com espaçamento
+   - Centraliza horizontalmente
+   - Usa 100% da largura disponível
+*/
 .imagens{
     display: flex;
     gap: 2vmin;
@@ -69,9 +122,17 @@ body{
     width: 100%;
     justify-content: center;
 }
+
+/* MARGEM SUPERIOR para a seção de rastreamento */
 .rastreamento{
     margin-top: 3.5vmin;
 }
+
+/* CÍRCULO (etapa do rastreamento)
+   - Tamanho com clamp para responsividade
+   - Alinha conteúdo centralizado
+   - Fundo verde, borda preta
+*/
 .bola{
     width: clamp(50px, 12vmin, 150px); 
     aspect-ratio: 1/1;
@@ -83,14 +144,20 @@ body{
     overflow: hidden;
     border: 1px solid black;
 }
+
+/* Imagem dentro da bola */
 .bola img{
     width: 70%;
     height: 70%; 
     object-fit: contain;
 }
+
+/* CLASSE DE MARGEM padrão usada em containers */
 .margem{
     margin: 3vmin 5vmin 3vmin 5vmin;
 }
+
+/* ÍCONES com tamanho fixo e proporção controlada */
 #pix{
     width: 6vmin;
     aspect-ratio: 0.938;
@@ -99,9 +166,13 @@ body{
     width: 5.5vmin;
     aspect-ratio: 1/1;
 }
+
+/* ESTADO DE ETAPA ainda não atingida (mais claro) */
 #branco{
     background-color: rgba(255, 255, 255, 0.398);
 }
+
+/* TAMANHOS INDIVIDUAIS para ícones ilustrativos */
 .imagem{
     width: 10vmin; 
 }
@@ -118,6 +189,12 @@ body{
 #casa{
     width: 9vmin;
 }
+
+/* LEGENDA abaixo de cada ícone
+   - Alinha verticalmente
+   - Centraliza texto
+   - Tamanho responsivo com clamp
+*/
 .legenda {
     display: flex;
     flex-direction: column;
@@ -125,33 +202,43 @@ body{
     text-align: center;
     width: clamp(50px, 15vmin, 150px); 
 }
+
+/* TEXTO pequeno abaixo das etapas */
 .texto{
     font-size: clamp(10px, 2vmin, 16px);
     line-height: 2vmin;
 }
+
+/* RESPONSIVIDADE para telas pequenas */
 @media (max-width: 768px) {
+
+    /* Ajusta body para colunar e centralizado */
     body {
         flex-direction: column;
         align-items: center;
         margin-top: 3vmin;
     }
 
+    /* quadrado_um e quadrado_dois se expandem na largura */
     .quadrado_um,
     .quadrado_dois {
         width: 90%;
         font-size: 4vmin;
     }
 
+    /* Ajuste no tamanho da imagem principal */
     .container_img {
         width: 97%;
         height: 30vh;
     }
 
+    /* Fonte e espaçamento menores para caber em telas pequenas */
     .container {
         font-size: 5vmin;
         line-height: 7vmin;
     }
 
+    /* Itens de status em coluna */
     .status {
         flex-direction: column;
         align-items: flex-start;
@@ -159,6 +246,7 @@ body{
         width: 100%;
     }
 
+    /* Imagens do rastreamento em grid para melhor organização */
     .imagens {
         display: grid;
         grid-template-columns: 1fr 1fr; 
@@ -168,20 +256,24 @@ body{
         margin-top: 3vmin;
     }
 
+    /* Ajuste da largura da legenda no mobile */
     .legenda {
         width: 100%;
         max-width: 22vmin; 
     }
 
+    /* Bolas maiores no mobile */
     .bola {
         width: clamp(50px, 20vmin, 150px);
     }
 
+    /* Texto da legenda mais legível em telas menores */
     .texto {
         font-size: clamp(12px, 2.5vmin, 18px);
         line-height: 1.5;
     }
 
+    /* Ajuste de tamanho para ícones em dispositivos móveis */
     #pix, #confirmado, .imagem {
         width: 10vmin;
     }

@@ -1,16 +1,29 @@
-*{
+/* RESET GERAL */
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    text-decoration: none;
 }
-body{
+
+/* CONFIGURAÇÃO INICIAL DO BODY
+   - Fundo escuro
+   - Alinhamento horizontal entre containers
+   - Espaço no topo da tela
+*/
+body {
     background-color: rgb(80, 80, 80, 100%);
     display: flex;
     align-items: flex-start;
     justify-content: space-evenly;
     margin-top: 5vmin;
 }
-.container_um{
+
+/* CONTAINER ESQUERDO (formulário de endereço e frete)
+   - Caixa branca com fonte grande
+   - Espaçamento entre linhas adequado para leitura
+*/
+.container_um {
     width: 37%;
     font-size: 5vmin;
     font-weight: 400;
@@ -18,14 +31,18 @@ body{
     background-color: rgb(255, 255, 255);
     border-radius: 10px;
     display: flex;
-   line-height: 5vmin;
+    line-height: 5vmin;
 }
-.label_input{
-    display: block; 
-    margin-bottom: 1vmin; 
+
+/* RÓTULOS DOS CAMPOS */
+.label_input {
+    display: block;
+    margin-bottom: 1vmin;
     cursor: pointer;
 }
-#CEP, #endereco{
+
+/* CAMPOS DE TEXTO LONGOS (CEP e Endereço) */
+#CEP, #endereco {
     width: 70%;
     vertical-align: top;
     padding: 8px;
@@ -34,7 +51,9 @@ body{
     border-radius: 7px;
     margin-bottom: 1vmin;
 }
-#numero{
+
+/* CAMPO DE TEXTO CURTO (Número) */
+#numero {
     width: 30%;
     vertical-align: top;
     padding: 8px;
@@ -43,12 +62,19 @@ body{
     border-radius: 7px;
     margin-bottom: 1vmin;
 }
-.frete, form{
-    width: 100%;}
-.frete{
+
+/* ÁREA DE FRETE */
+.frete, form {
+    width: 100%;
+}
+.frete {
     margin-bottom: 1vmin;
 }
-.opcao{
+
+/* OPÇÕES DE FRETE
+   - Caixas empilhadas com espaçamento interno
+*/
+.opcao {
     border: 1px solid black;
     display: flex;
     flex-direction: column;
@@ -57,52 +83,65 @@ body{
     color: rgba(0, 0, 0, 0.657);
     width: 70%;
 }
-.margem{
+
+/* ESPAÇAMENTO PADRÃO INTERNO */
+.margem {
     margin: 3vmin 5vmin 3vmin 5vmin;
 }
-.opcao:nth-child(3){
+
+/* REMOVE BORDAS DUPLICADAS ENTRE OPÇÕES */
+.opcao:nth-child(3) {
     border-top: none;
     border-bottom: none;
 }
-.linha_um{
+
+/* LINHA COM TÍTULO DA OPÇÃO E CHECKBOX */
+.linha_um {
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
-.linha_um, .sub{
+.linha_um, .sub {
     margin: 0.5vmin 1vmin 0vmin 1vmin;
 }
-.sub{
+
+/* SUBTEXTO EMBAIXO DE CADA OPÇÃO */
+.sub {
     font-size: 2vmin;
     line-height: 2vmin;
     margin-top: 0;
 }
-.radio_checkbox{
-  appearance: none;
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  width: 3vmin;
-  height: 3vmin;
-  border: 2px solid rgba(0, 0, 0, 0.657);
-  border-radius: 3px;
-  position: relative;
-  cursor: pointer;
-}
-.radio_checkbox:checked::after {
-  content: "X";
-  color: rgba(0, 0, 0, 0.657);
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 2vmin;
+
+/* CHECKBOX PERSONALIZADO */
+.radio_checkbox {
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    width: 3vmin;
+    height: 3vmin;
+    border: 2px solid rgba(0, 0, 0, 0.657);
+    border-radius: 3px;
+    position: relative;
+    cursor: pointer;
 }
 
-.container_dois{
+/* MARCAÇÃO VISUAL DO CHECKBOX */
+.radio_checkbox:checked::after {
+    content: "X";
+    color: rgba(0, 0, 0, 0.657);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2vmin;
+}
+
+/* CONTAINER DIREITO (resumo de valores e formas de pagamento) */
+.container_dois {
     width: 35%;
     font-size: 5vmin;
     font-weight: 400;
@@ -112,7 +151,9 @@ body{
     line-height: 8vmin;
     gap: 1rem;
 }
-.valor{
+
+/* LINHA DE VALOR COM TÍTULO E NÚMERO */
+.valor {
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -120,19 +161,25 @@ body{
     width: 100%;
     justify-content: space-between;
 }
-#pix, #cartão{
-  width: 6vmin;
+
+/* ÍCONES DAS FORMAS DE PAGAMENTO */
+#pix, #cartão {
+    width: 6vmin;
 }
-#boleto{
+#boleto {
     width: 5vmin;
     margin-left: 0.4vmin;
 }
-.informações{
-  display: flex;
-  align-items: center;
-  gap: 3vmin; 
+
+/* BLOCO COM OPÇÕES DE PAGAMENTO */
+.informações {
+    display: flex;
+    align-items: center;
+    gap: 3vmin;
 }
-button{
+
+/* BOTÃO DE AÇÃO (ex: continuar, finalizar) */
+button {
     width: 70%;
     padding: 12px;
     border-radius: 10px;
@@ -143,106 +190,121 @@ button{
     cursor: pointer;
     font-weight: 800;
 }
-.espaco{
+
+/* CENTRALIZAÇÃO DO BOTÃO */
+.espaco {
     width: 100%;
     display: flex;
     justify-content: center;
 }
-.Valor{
+
+/* BLOCOS DE VALOR DIFERENCIADO */
+.Valor {
     margin-top: 2vmin;
     line-height: 5vmin;
 }
-#menor{
+#menor {
     font-size: 4vmin;
 }
-#valor_pix{color: rgb(1, 189, 174);}
-#valor_cartao{color: rgb(158, 185, 214);}
+#valor_pix {
+    color: rgb(1, 189, 174);
+}
+#valor_cartao {
+    color: rgb(158, 185, 214);
+}
 
- @media screen and (max-width: 815px){
-    body{
+/* RESPONSIVO PARA TELAS PEQUENAS */
+@media screen and (max-width: 815px) {
+
+    /* Ajusta layout para coluna */
+    body {
         display: flex;
         flex-direction: column;
         margin: 3vmin 3vmin 2vmin 3vmin;
     }
 
-    .container_um{
+    /* Ajustes do primeiro container */
+    .container_um {
         width: 100%;
         margin-bottom: 3vmin;
     }
 
-    .container_um label, #frete_label{
+    /* Rótulos maiores e mais espaçados */
+    .container_um label, #frete_label {
         font-size: 8vmin;
         margin: 3vmin 0 3vmin 0;
         display: block;
     }
 
-    #CEP, #endereco{
+    /* Campos maiores para digitação em tela touch */
+    #CEP, #endereco {
         width: 100%;
         padding: 10px;
         font-size: 5vmin;
     }
 
-    #numero{
+    #numero {
         padding: 10px;
         width: 50%;
         font-size: 5vmin;
     }
 
-    .opcao{
+    /* Caixas de opções mais largas */
+    .opcao {
         width: 100%;
         padding: 8px;
     }
 
-    #correio, #sedex, #pac{
+    #correio, #sedex, #pac {
         font-size: 5vmin;
     }
 
-    .sub{
+    .sub {
         font-size: 3.5vmin;
         margin-top: 2vmin;
     }
 
-
-    .container_dois{
+    /* Ajuste do segundo container */
+    .container_dois {
         width: 100%;
     }
 
-    .informações{
+    .informações {
         font-size: 10vmin;
         margin: 1vmin 0 2vmin 0;
         display: flex;
         align-items: center;
     }
 
-    .valor{
+    .valor {
         display: flex;
         justify-content: space-around;
     }
 
-    .radio_checkbox{
+    .radio_checkbox {
         width: 5vmin;
         height: 5vmin;
     }
 
-    .radio_checkbox:checked::after{
+    .radio_checkbox:checked::after {
         font-size: 3vmin;
     }
 
-    .Valor{
+    .Valor {
         margin-left: 3vmin;
     }
 
-    #menor{
+    #menor {
         font-size: 6vmin;
         margin: 0 0 3vmin 0;
     }
 
-    #maior{
+    #maior {
         font-size: 8vmin;
     }
 
-    button{
+    button {
         width: 100%;
         margin-top: 5vmin;
     }
- }
+}
