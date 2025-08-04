@@ -82,3 +82,49 @@ button{
     cursor: pointer;
     font-weight: 800;
 }
+
+    @media screen and (max-width: 815px){
+        body{
+            display: flex;
+            flex-direction: column;
+            margin: 3vmin 3vmin 2vmin 3vmin;
+        }
+
+        .quadrado_um{
+            width: 100%;
+            margin-bottom: 3vmin;
+        }
+
+        .container_img{
+            margin: auto;
+            width: 95%;
+        }
+
+        .quadrado_dois{
+            width: 100%;
+        }
+
+        .preco_num{
+            font-size: 10vmin;
+        }
+
+        #pix, #boleto{
+            width: 10vmin;
+        }
+
+        #cartão{
+            width: 12vmin;
+        }
+
+        #plano{
+           display: none;
+        }
+
+        .margin{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+        }
+    }
+

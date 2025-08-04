@@ -2,6 +2,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    text-decoration: none
 }
 @import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
 .quadrado{
@@ -78,7 +79,9 @@ input{
   font-size: 2vmin;
   z-index: 1;
 }
-
+a{
+    color: rgb(10, 48, 67);
+}
 button{
     width: 100%;
     padding: 2vmin;
@@ -87,6 +90,7 @@ button{
     color: white;
     font-size: 5vmin;
     position: relative;
+    cursor: pointer;
 }
 p{
     position: absolute;

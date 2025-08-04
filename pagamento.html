@@ -15,19 +15,19 @@
             <input type="number" id="CEP" required placeholder="xxxxx-xxx">
 
             <div class="frete">
-                <label for="frete_opcao">FRETE</label>
+                <label for="frete_opcao" id="frete_label">FRETE</label>
                 <div class="opcao">
-                    <div class="linha_um"><p>Correios - grátis</p> <input type="radio" name="frete_opcao" id="opcao1" class="radio_checkbox"></div>
+                    <div class="linha_um"><p id="correio">Correios - grátis</p> <input type="radio" name="frete_opcao" id="opcao1" class="radio_checkbox"></div>
                     <p class="sub">Entrega em até 6 dias úteis</p>
                 </div>
 
                 <div class="opcao">
-                    <div class="linha_um"><p>Sedex - R$ 12,90</p> <input type="radio" name="frete_opcao" id="opcao2" class="radio_checkbox"></div>
+                    <div class="linha_um"><p id="sedex">Sedex - R$ 12,90</p> <input type="radio" name="frete_opcao" id="opcao2" class="radio_checkbox"></div>
                     <p class="sub">Entrega em até 3 dias</p>
                 </div>
 
                 <div class="opcao">
-                    <div class="linha_um"><p>PAC - R$ 21,00</p> <input type="radio" name="frete_opcao" id="opcao3" class="radio_checkbox"></div>
+                    <div class="linha_um"><p id="pac">PAC - R$ 21,00</p> <input type="radio" name="frete_opcao" id="opcao3" class="radio_checkbox"></div>
                     <p class="sub">Entrega em até 4 dias úteis</p>
                 </div>
             </div>
@@ -70,7 +70,7 @@
 
         <div class="Valor">
             <p id="menor">Valor total:</p>
-            <p>R$3509,00</p>
+            <p id="maior">R$3509,00</p>
         </div>
 
         <div class="espaco"><button>PAGAR</button></div>

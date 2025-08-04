@@ -157,3 +157,92 @@ button{
 }
 #valor_pix{color: rgb(1, 189, 174);}
 #valor_cartao{color: rgb(158, 185, 214);}
+
+ @media screen and (max-width: 815px){
+    body{
+        display: flex;
+        flex-direction: column;
+        margin: 3vmin 3vmin 2vmin 3vmin;
+    }
+
+    .container_um{
+        width: 100%;
+        margin-bottom: 3vmin;
+    }
+
+    .container_um label, #frete_label{
+        font-size: 8vmin;
+        margin: 3vmin 0 3vmin 0;
+        display: block;
+    }
+
+    #CEP, #endereco{
+        width: 100%;
+        padding: 10px;
+        font-size: 5vmin;
+    }
+
+    #numero{
+        padding: 10px;
+        width: 50%;
+        font-size: 5vmin;
+    }
+
+    .opcao{
+        width: 100%;
+        padding: 8px;
+    }
+
+    #correio, #sedex, #pac{
+        font-size: 5vmin;
+    }
+
+    .sub{
+        font-size: 3.5vmin;
+        margin-top: 2vmin;
+    }
+
+
+    .container_dois{
+        width: 100%;
+    }
+
+    .informações{
+        font-size: 10vmin;
+        margin: 1vmin 0 2vmin 0;
+        display: flex;
+        align-items: center;
+    }
+
+    .valor{
+        display: flex;
+        justify-content: space-around;
+    }
+
+    .radio_checkbox{
+        width: 5vmin;
+        height: 5vmin;
+    }
+
+    .radio_checkbox:checked::after{
+        font-size: 3vmin;
+    }
+
+    .Valor{
+        margin-left: 3vmin;
+    }
+
+    #menor{
+        font-size: 6vmin;
+        margin: 0 0 3vmin 0;
+    }
+
+    #maior{
+        font-size: 8vmin;
+    }
+
+    button{
+        width: 100%;
+        margin-top: 5vmin;
+    }
+ }

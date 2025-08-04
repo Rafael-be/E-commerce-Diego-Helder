@@ -148,7 +148,7 @@ body{
     }
 
     .container {
-        font-size: 3.5vmin;
+        font-size: 5vmin;
         line-height: 7vmin;
     }
 
@@ -160,12 +160,17 @@ body{
     }
 
     .imagens {
-        flex-wrap: wrap;
+        display: grid;
+        grid-template-columns: 1fr 1fr; 
+        grid-template-rows: auto auto; 
         gap: 3vmin;
+        justify-items: center;
+        margin-top: 3vmin;
     }
 
     .legenda {
-        width: clamp(50px, 22vmin, 150px);
+        width: 100%;
+        max-width: 22vmin; 
     }
 
     .bola {
@@ -178,6 +183,6 @@ body{
     }
 
     #pix, #confirmado, .imagem {
-        width: 8vmin;
+        width: 10vmin;
     }
 }
