@@ -190,6 +190,18 @@ ul h1,
     flex-wrap: nowrap;
 }
 
+/* CONTAINER DE INFORMAÇÕES - Organização em coluna */
+.envolta {
+    width: 16vw;
+    max-width: 16vw;
+    border-radius: 22px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    margin-bottom: 3vmin;
+    flex-direction: column;
+}
+
 /* CARD DO PRODUTO - Estilização visual */
 .item {
     width: 26.8vw;
@@ -208,18 +220,6 @@ ul h1,
     max-width: 35vw;
     min-height: 35vh;
     display: block;
-}
-
-/* CONTAINER DE INFORMAÇÕES - Organização em coluna */
-.envolta {
-    width: 16vw;
-    max-width: 16vw;
-    border-radius: 22px;
-    display: flex;
-    justify-content: flex-start;
-    align-items: flex-start;
-    margin-bottom: 3vmin;
-    flex-direction: column;
 }
 
 /* TEXTOS DENTRO DO ENVOLTA - Estilização básica */
