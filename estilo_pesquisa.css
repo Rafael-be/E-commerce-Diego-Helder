@@ -314,7 +314,7 @@ ul h1, #periferico {
         flex-direction: row;
     }
     .item {
-        margin: 0 4vmin 1vmin 4vmin;
+        margin: 0 0vmin 1vmin 4vmin;
         width: 50%;
         max-width: 150px;
         margin-bottom: 15px;
